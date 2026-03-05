@@ -1,87 +1,123 @@
 <!doctype html>
 <html lang="tr">
   <head>
-    <!-- UTF-8 önerilir (metin/karakter bozulmalarını önler) -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YMH354 - CSS ile Tasarım Örneği</title>
-
-    <!-- External CSS (en önerilen yöntem) -->
+    <title>Nacihan Tural - Portfolyo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <a class="skip-link" href="#content">İçeriğe atla</a>
 
-    <header class="site-header">
+    <header class="site-header" id="home">
       <div class="container header-inner">
-        <h1 class="brand">YMH354</h1>
-        <p class="tagline">Designing with CSS: Layout, Selectors, Box Model</p>
+        <img src="https://via.placeholder.com/150" alt="Nacihan Tural Profil" class="profile-img">
+        <h1 class="brand">Nacihan Tural</h1>
+        <p class="tagline">Game Developer @ Levitas Games | Software Engineering Student</p>
+        <p class="short-desc">Oyun geliştirme, gerçek zamanlı işleme (real-time rendering) ve interaktif teknolojiler üzerine tutkulu bir yazılım mühendisi adayı.</p>
       </div>
     </header>
 
     <nav class="site-nav" aria-label="Ana menü">
       <div class="container">
         <ul class="nav-list">
-          <li><a href="#selectors">Selectors</a></li>
-          <li><a href="#layout">Layout</a></li>
-          <li><a href="#boxmodel">Box Model</a></li>
-          <li><a href="#responsive">Responsive</a></li>
+          <li><a href="#about">Hakkımda</a></li>
+          <li><a href="#education">Eğitim & Deneyim</a></li>
+          <li><a href="#skills">Yetenekler</a></li>
+          <li><a href="#projects">Projeler</a></li>
+          <li><a href="#contact">İletişim</a></li>
         </ul>
       </div>
     </nav>
 
     <main class="container layout" id="content">
-      <article class="card" id="selectors">
-        <h2>1) Selectors + Pseudo-class</h2>
-        <p>
-          Bu paragraf normal akışta. <span class="badge">.class</span> ve
-          <span id="special">#id</span> örneği içeriyor.
-        </p>
+      
+      <section class="card" id="about">
+        <h2>Hakkımda</h2>
+        <p>Merhaba! Ben Nacihan, Ankara Üniversitesi'nde Yazılım Mühendisliği 3. sınıf öğrencisiyim ve şu anda <strong>Levitas Games</strong> bünyesinde Game Developer olarak çalışıyorum.</p>
+        <p>Oyun geliştirme süreçlerine büyük ilgi duyuyor; özellikle <strong>real-time rendering</strong> ve <strong>real-time animations</strong> konularında kendimi geliştiriyorum. Yazılımın yanı sıra 3D modelleme (Blender), elektronik (Raspberry Pi) ve amatör telsizcilik gibi donanım ve tasarım odaklı hobilerim de bulunuyor. Amacım, teknik becerilerimi estetik ve performansla birleştirerek akıcı ve etkileyici oyun deneyimleri yaratmak.</p>
+      </section>
 
-        <p class="note">
-          Linkin üzerine gel: <a href="#selectors">hover örneği</a>
-        </p>
-
-        <button class="btn" type="button">Buton</button>
-      </article>
-
-      <aside class="sidebar card" id="layout">
-        <h2>2) Sidebar</h2>
-        <p>
-          Bu alan tipik web sayfası düzenini (header/nav/content/sidebar/footer)
-          göstermeye yarar.
-        </p>
-
-        <div class="callout">
-          <strong>İpucu:</strong> box-sizing: border-box kullanmak hesaplamaları kolaylaştırır.
+      <section class="card" id="education">
+        <h2>Eğitim & Deneyim</h2>
+        
+        <div class="timeline-item">
+          <h3>Game Developer</h3>
+          <p><strong>Levitas Games</strong> | <em>Güncel</em></p>
         </div>
-      </aside>
 
-      <section class="card" id="boxmodel">
-        <h2>3) Box Model Demo</h2>
-        <div class="box-demo">
-          <div class="box">
-            <p>
-              Bu kutu; <em>content</em>, <em>padding</em>, <em>border</em>, <em>margin</em>
-              bileşenlerini görselleştirir.
-            </p>
+        <div class="timeline-item">
+          <h3>Lisans: Yazılım Mühendisliği (3. Sınıf)</h3>
+          <p><strong>Ankara Üniversitesi</strong></p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Proje Takım Lideri (TÜBİTAK 2209-A)</h3>
+          <p>Demans önlemeye yönelik mobil uygulama projesi. Ayrıca proje bulgularını <strong>HCI-E 2025 (Azerbaycan)</strong> konferansında sundum.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Yazılım Stajyeri</h3>
+          <p><strong>Electromtech Medical Software</strong> | Diz protezi ameliyatları için Unity tabanlı uygulama geliştirme süreci.</p>
+        </div>
+      </section>
+
+      <section class="card" id="skills">
+        <h2>Yetenekler</h2>
+        <div class="skills-grid">
+          <span class="badge">Unity 3D / 2D</span>
+          <span class="badge">C#</span>
+          <span class="badge">Java</span>
+          <span class="badge">Python</span>
+          <span class="badge">Blender (3D Modeling & Rigging)</span>
+          <span class="badge">Real-time Rendering</span>
+          <span class="badge">Git & GitHub</span>
+          <span class="badge">Raspberry Pi</span>
+        </div>
+      </section>
+
+      <section class="card" id="projects">
+        <h2>Projeler</h2>
+        <div class="project-list">
+          <div class="project-item">
+            <h3>Online Tank Oyunu</h3>
+            <p>Çok oyunculu ağ altyapısı (networking) ve mimarisi kurgulanmış rekabetçi tank oyunu.</p>
+            <small><strong>Teknolojiler:</strong> Unity, C#, Multiplayer Networking</small>
+          </div>
+          <div class="project-item">
+            <h3>Grid Tabanlı İnşa ve Savaş Oyunu</h3>
+            <p>Grid (ızgara) sistemi üzerinde bloklarla yapı inşa etme ve savaş mekanikleri içeren oyun projesi.</p>
+            <small><strong>Teknolojiler:</strong> Unity, C#</small>
+          </div>
+          <div class="project-item">
+            <h3>Backgammon Online</h3>
+            <p>Zar atma (grabdice, throwmanager) ve fizik etkileşimleri barındıran çevrimiçi tavla oyunu.</p>
+            <small><strong>Teknolojiler:</strong> Unity, C#, 3D Physics</small>
+          </div>
+          <div class="project-item">
+            <h3>MFA (Çok Faktörlü Kimlik Doğrulama) Sistemi</h3>
+            <p>Google Authenticator entegrasyonu ile geliştirilmiş güvenlik sistemi ve test senaryoları.</p>
+            <small><strong>Teknolojiler:</strong> Python</small>
           </div>
         </div>
       </section>
 
-      <section class="card" id="responsive">
-        <h2>4) Responsive (Media Query)</h2>
-        <p>
-          Ekran daraldığında yerleşim tek sütuna düşecek ve menü daha kompakt görünecek.
-          Tarayıcı genişliğini değiştirip gözlemleyin.
-        </p>
+      <section class="card" id="contact">
+        <h2>İletişim</h2>
+        <p>Projelerim hakkında konuşmak veya iletişime geçmek istersen aşağıdaki kanalları kullanabilirsin:</p>
+        <ul class="contact-list">
+          <li><strong>E-posta:</strong> <a href="mailto:nacihantural@gmail.com">nacihantural@gmail.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/nacihantural" target="_blank">github.com/nacihantural</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/turalnacihan/" target="_blank">linkedin.com/in/turalnacihan</a></li>
+        </ul>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <small>© YMH354 Web Design and Programming</small>
+        <small>© 2026 Nacihan Tural | YMH354 Web Tasarımı ve Programlama</small>
       </div>
     </footer>
   </body>
